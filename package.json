@@ -1,0 +1,14 @@
+{
+  "name": "mofolio",
+  "version": "1.0.0",
+  "description": "portfolio package!!",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mo",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
