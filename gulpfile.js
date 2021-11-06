@@ -67,7 +67,7 @@ function lint (done) {
 
 // Watch task to watch for file changes
 function watch (done) {
-	gulp.watch('scss/**/*.scss', gulp.series(styles));
+	gulp.watch('scss/*.scss', gulp.series(styles));
 	gulp.watch('./*.html', gulp.series(html));
 	gulp.watch('js/*.js', gulp.series(lint));
 	done();

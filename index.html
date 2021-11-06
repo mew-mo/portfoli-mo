@@ -4,21 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/custom.min.css">
-  <title>portfoli-mo</title>
-</head>
-<body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
 
-  <nav>
-    <ul>
-      <li>about me</li>
-      <li>my work</li>
-      <li>contact</li>
-    </ul>
-  </nav>
+  <link rel="stylesheet" href="css/custom.min.css">
+  <title>portfoli-mo | home</title>
+</head>
+<body id="home">
+
+<nav>
+  <ul>
+    <li class="logo"><a href="#">mogo</a></li>
+  </ul>
+  <ul class="menu">
+    <li class="item"><a href="about.html" class="link link-hov">about</a></li>
+    <li class="item"><a href="work.html" class="link link-hov">work</a></li>
+    <li class="item"><a href="contact.html" class="link link-hov">contact</a></li>
+  </ul>
+</nav>
   <!-- nav ends -->
 
-  <div class="nav-arrow">
+  <div class="nav-arrow-container">
+    <span class="material-icons-outlined nav-arrow accent-pal">
+    expand_more
+    </span>
     <!-- div for the arrow to move you up or down the page...! -->
   </div>
   <!-- nav arrow ends - will be sticky? or fixed or smth -->
@@ -27,19 +39,41 @@
 
     <div class="hero-txt">
       <div class="entry-txt">
-        <h1>Hi! I'm</h1>
+        <h1 class="main-pal title">Hi!</h1>
+        <h2 class="main-pal subtitle">I'm <span class="accent-pal">MO</span>.</h2>
         <div class="anim-logo">
           <!-- :D logo animation goes heeeere only play on hover though that'd be cool or somethiiing (if they stop hovering then reverse the gif until its frame one again or something)-->
         </div>
+        <div class="next-txt dark-pal">
+          <p>I'm an aspiring web dev and designer. Here are some programs I'm familiar with! Don't worry, there's more info <span>about me</span>!</p>
+        </div>
+        <h4 class="i-subtitle">Web Dev // Graphic Designer // Digital Artist</h4>
       </div>
 
-      <div class="next-txt">
-        <p>I'm an aspiring web dev and designer. Here are some programs I'm familiar with! Don't worry, there's more info <span>about me</span>!</p>
+      <div class="change-hero-txt">
+        <div class="arrows">
+          <a class="link--arrowed" href="#">
+            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewbox="0 0 32 32">
+              <g fill="none" stroke="#4ECDC4" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+                <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
+                <path class="arrow-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+
+        <div class="wiggle">
+
+        </div>
       </div>
+
     </div>
+    <!-- hero txt ends -->
 
     <div class="hero-img">
-
+      <div class="the-hero-img">
+        <img src="img/hero.png" alt="Hero Image- A Self Portrait">
+      </div>
     </div>
 
   </div>
@@ -48,6 +82,34 @@
 
   <div class="section-work">
 
+    <div class="work-txt-container">
+      <div class="work-txt">
+        <div class="wiggle"></div>
+        <h3 class="accent-pal">My works</h3>
+        <div class="wiggle"></div>
+      </div>
+    </div>
+
+    <div class="work-blocs">
+
+      <div class="work-types">
+        <div class="circle-container webux">
+          <h5 class="light-pal">Web & UX</h5>
+          <img src="img/sweetas.png" class="circle-img" alt="Web & UX Design">
+        </div>
+
+        <div class="circle-container graphic">
+          <h5 class="light-pal">Graphic Design</h5>
+          <img src="img/luma.png" class="circle-img" alt="Graphic Design">
+        </div>
+
+        <div class="circle-container digart">
+          <h5 class="light-pal">Digital Art</h5>
+          <img src="img/1025.png" class="circle-img" alt="Digital Art">
+        </div>
+      </div>
+    </div>
+
   </div>
   <!-- work section ends -->
 
@@ -55,7 +117,8 @@
 
   </footer>
   <!-- footer ends -->
-
+  <script src="js/jquery.min.js"></script>
+  <script src="js/anime.min.js"></script>
   <script src="js/custom.js"></script>
 </body>
 </html>
