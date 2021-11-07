@@ -10,8 +10,13 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $light;
+  overflow-x: hidden;
 }
 
 ul, li {
@@ -67,7 +72,7 @@ h4 {
 
 h5 {
   font-size: 1.8rem;
-  font-weight: 300rem;
+  font-weight: 400;
   text-transform: lowercase;
 }
 
@@ -94,6 +99,10 @@ nav ul {
     color: $dark;
     font-size: 1.3rem;
   }
+}
+
+.logo img {
+  width: 80px;
 }
 
 .menu {
@@ -161,18 +170,29 @@ nav ul {
   width: 70%;
 }
 
+// index.html
+// ============================================
+
 // down arrow
 // ======================
 
 .nav-arrow-container {
-  // position: relative;
+  position: relative;
+  display: block;
+  background: $bg;
 }
 
 .nav-arrow {
-  position: fixed;
+  position: absolute;
   font-size: 40px;
-  top: 90vh;
+  top: 85vh;
   left: 50%;
+  cursor: pointer;
+}
+
+.nav-arrow-return {
+  @extend .nav-arrow;
+  top: 95vh;
 }
 
 
@@ -313,6 +333,8 @@ nav ul {
   cursor: pointer;
   justify-content: center;
   align-items: center;
+  box-shadow: -1px 4px 11px rgba($dark, 0.61);
+
 
   &:not(:last-child) {
       margin-right: $main-margins;
@@ -322,9 +344,9 @@ nav ul {
     letter-spacing: 0;
     transform: scale(0);
     position: relative;
-    color: white;
     z-index: 99;
     transition: all 280ms ease-in-out;
+    text-shadow: -1px 4px 11px rgba(0,0,0,0.61);
   }
 
   &:hover {
@@ -354,6 +376,37 @@ nav ul {
   transition: all 280ms ease-in-out;
 }
 
+// wux.html
+// ============================================
+
+.section-wux {
+  @extend .section-work;
+
+  .work-txt {
+    padding-top: 50px;
+  }
+
+}
+
+.work-bbls {
+  height: 60vh;
+  width: 100%;
+}
+
+.bubble {
+  @extend .circle-container;
+  animation-timing-function: linear;
+  transition: all 280ms ease-in-out;
+}
+
+.bubble img {
+  @extend .circle-img;
+  transform: scale(1);
+
+  &:hover {
+    transform: scale(1);
+  }
+}
 
 // footer
 // ======================

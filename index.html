@@ -17,23 +17,23 @@
 
 <nav>
   <ul>
-    <li class="logo"><a href="#">mogo</a></li>
+    <li class="logo"><a href="index.html">
+      <img src="img/mogo.svg" alt="my logo, also known as the mogo">
+      </a></li>
   </ul>
   <ul class="menu">
     <li class="item"><a href="about.html" class="link link-hov">about</a></li>
-    <li class="item"><a href="work.html" class="link link-hov">work</a></li>
+    <li class="item"><a href="#work" class="link link-hov">work</a></li>
     <li class="item"><a href="contact.html" class="link link-hov">contact</a></li>
   </ul>
 </nav>
   <!-- nav ends -->
 
   <div class="nav-arrow-container">
-    <span class="material-icons-outlined nav-arrow accent-pal">
+    <a href="#work"><span class="material-icons-outlined nav-arrow accent-pal">
     expand_more
-    </span>
-    <!-- div for the arrow to move you up or down the page...! -->
+    </span></a>
   </div>
-  <!-- nav arrow ends - will be sticky? or fixed or smth -->
 
   <div class="section-landing">
 
@@ -77,12 +77,19 @@
     </div>
 
   </div>
+
   <!-- landing section ends -->
+
+  <div class="nav-arrow-container">
+    <a href="#home"><span class="material-icons-outlined nav-arrow-return accent-pal">
+    expand_less
+    </span></a>
+  </div>
 
 
   <div class="section-work">
 
-    <div class="work-txt-container">
+    <div class="work-txt-container" id="work">
       <div class="work-txt">
         <div class="wiggle"></div>
         <h3 class="accent-pal">My works</h3>
@@ -94,18 +101,21 @@
 
       <div class="work-types">
         <div class="circle-container webux">
+          <a href="wux.html">
           <h5 class="light-pal">Web & UX</h5>
-          <img src="img/sweetas.png" class="circle-img" alt="Web & UX Design">
+          <img src="img/sweetas.png" class="circle-img" alt="Web & UX Design"></a>
         </div>
 
         <div class="circle-container graphic">
+          <a href="graphic.html">
           <h5 class="light-pal">Graphic Design</h5>
-          <img src="img/luma.png" class="circle-img" alt="Graphic Design">
+          <img src="img/luma.png" class="circle-img" alt="Graphic Design"></a>
         </div>
 
         <div class="circle-container digart">
+          <a href="digiart.html">
           <h5 class="light-pal">Digital Art</h5>
-          <img src="img/1025.png" class="circle-img" alt="Digital Art">
+          <img src="img/1025.png" class="circle-img" alt="Digital Art"></a>
         </div>
       </div>
     </div>
