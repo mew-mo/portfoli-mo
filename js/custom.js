@@ -9,15 +9,34 @@
   // ==================
 
   var web = [
+    miniFoli = {
+      title: 'Mini Portfolio',
+      img: 'img/minifoli.png'
+    },
+    mrGos = {
+      title: 'Mr Go\'s',
+      img: 'img/mrgos.png'
+    },
+    burgerLiquor = {
+      title: 'Burger Liquor',
+      img: 'img/burgerliquor.png'
+    },
+    kilRec = {
+      title: 'Kilbirnie Rec Centre',
+      img: 'img/kilbirnierec.png'
+    },
     sweetAs = {
       title: 'Sweet As',
       img: 'img/sweetas.png'
     },
-    test = {
-      title: 'Yo',
-      img: 'img/mogo.svg'
+    needAHand = {
+      title: 'Need A Hand',
+      img: 'img/needahand.png'
+    },
+    seaLionTrust = {
+      title: 'NZ Sea Lion Trust',
+      img: 'img/nzslt.png'
     }
-
   ];
 
   // graphic arr
@@ -82,8 +101,9 @@
         document.querySelector('.work-bbls').innerHTML += `
         <div class="bubble-container">
             <div id="bubble${i}" class="bubble">
+            <a href="wux-proj.html">
               <h5 class="light-pal">${web[i].title}</h5>
-                <img src="${web[i].img}" alt="${web[i].title} Project Preview">
+                <img src="${web[i].img}" alt="${web[i].title} Project Preview"></a>
             </div>
         </div>
         `;
@@ -108,14 +128,19 @@
           targets: `${appWux.bubbles[i]}`,
           translateY: Math.floor(Math.random() * height),
           translateX: Math.floor(Math.random() * width),
-
           loop: false,
           direction: 'alternate',
           easing: 'easeInOutCirc'
         });
       }
-    } //anims
+      appWux.click();
+    }, //anims
 
+    click: () => {
+      window.addEventListener('click', (e) => {
+        // alert('hey');
+      }, false);
+    }
   }; //appWux ends
 
   if (document.querySelector('#home')) {
