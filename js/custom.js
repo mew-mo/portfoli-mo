@@ -10,30 +10,37 @@
 
   var web = [
     miniFoli = {
+      id: 'minifoli',
       title: 'Mini Portfolio',
       img: 'img/minifoli.png'
     },
     mrGos = {
+      id: 'mrgos',
       title: 'Mr Go\'s',
       img: 'img/mrgos.png'
     },
     burgerLiquor = {
+      id: 'burgerliquor',
       title: 'Burger Liquor',
       img: 'img/burgerliquor.png'
     },
     kilRec = {
+      id: 'kilrec',
       title: 'Kilbirnie Rec Centre',
       img: 'img/kilbirnierec.png'
     },
     sweetAs = {
+      id: 'sweetas',
       title: 'Sweet As',
       img: 'img/sweetas.png'
     },
     needAHand = {
+      id: 'needahand',
       title: 'Need A Hand',
       img: 'img/needahand.png'
     },
     seaLionTrust = {
+      id: 'nzslt',
       title: 'NZ Sea Lion Trust',
       img: 'img/nzslt.png'
     }
@@ -52,7 +59,6 @@
   var digart = [
 
   ];
-
 
 
   // INDEX.HTML
@@ -94,6 +100,7 @@
 
     init: () => {
       appWux.addProjs();
+      appWux.click();
     },
 
     addProjs: () => {
@@ -101,7 +108,7 @@
         document.querySelector('.work-bbls').innerHTML += `
         <div class="bubble-container">
             <div id="bubble${i}" class="bubble">
-            <a href="wux-proj.html">
+            <a href="#" id="${web[i].id}" class="project">
               <h5 class="light-pal">${web[i].title}</h5>
                 <img src="${web[i].img}" alt="${web[i].title} Project Preview"></a>
             </div>
@@ -133,20 +140,49 @@
           easing: 'easeInOutCirc'
         });
       }
-      appWux.click();
     }, //anims
 
     click: () => {
       window.addEventListener('click', (e) => {
-        // alert('hey');
+        if (e.target.parentNode.className == 'project') {
+          sessionStorage.setItem('selected', e.target.parentNode.id);
+          window.location.href = 'wux-proj.html';
+        } //if e target
       }, false);
     }
   }; //appWux ends
+
+  // WUX-PROJ.HTML
+  // ==========================================
+  appWuxProj = {
+
+    selectedPage: false,
+
+    init: () => {
+      appWuxProj.setup();
+    },
+
+    setup: () => {
+      for (var i = 0; i < web.length; i++) {
+        if (web[i].id == sessionStorage.selected) {
+          appWuxProj.selectedPage = web[i];
+          console.log(appWuxProj.selectedPage);
+        } //if
+      } //for
+
+      document.querySelector('#wuxProj').innerHTML += `We got the ${appWuxProj.selectedPage.title}`;
+    }
+
+
+  }; //appwuxproj ends
+
 
   if (document.querySelector('#home')) {
     appHome.init();
   } else if (document.querySelector('#wux')) {
     appWux.init();
+  } else if (document.querySelector('#wuxProj')) {
+    appWuxProj.init();
   }
 
 }());
