@@ -76,9 +76,23 @@ h5 {
   text-transform: lowercase;
 }
 
+p {
+  font-size: 1.3rem;
+  line-height: 2.8rem;
+}
+
 a {
   text-decoration: none;
 }
+
+// mixins
+// ======================
+@mixin filter($scale: scale(1.1),) {
+  filter: saturate(0) invert(79%) sepia(66%) saturate(380%) hue-rotate(114deg) brightness(84%) contrast(90%);
+  transition: all 280ms ease-in-out;
+  transform: $scale;
+}
+
 
 // nav
 // ======================
@@ -358,9 +372,7 @@ nav ul {
     }
 
     .circle-img {
-      filter: saturate(0) invert(79%) sepia(66%) saturate(380%) hue-rotate(114deg) brightness(84%) contrast(90%);
-      transition: all 280ms ease-in-out;
-      transform: scale(1.1);
+      @include filter;
     }
   }
 
@@ -409,6 +421,58 @@ nav ul {
 
   &:hover {
     transform: scale(1);
+  }
+}
+
+// wux-proj.html
+// ============================================
+
+.section-wux-proj {
+  display: flex;
+  width: 100%;
+  // background: $bg;
+  align-items: center;
+  padding-top: $main-margins;
+
+  .proj-img {
+    width: 50%;
+    margin: 0 35px 0 $main-margins;
+  }
+
+  .proj-info {
+    width: 50%;
+    margin: 0 $main-margins 0 35px;
+  }
+
+  h5 {
+    display: inline;
+  }
+
+  .wiggle {
+    margin-bottom: 5px;
+  }
+
+  .proj-subtitle {
+    margin-top: 30px;
+
+    .proj-tools {
+      margin: 0 0 0 20px;
+    }
+  }
+
+  .proj-desc {
+    margin-top: 70px;
+  }
+
+  .img-container img {
+    width: 100%;
+    border-radius: 18px;
+    transition: all 280ms ease-in-out;
+
+
+    &:hover {
+      @include filter;
+    }
   }
 }
 
