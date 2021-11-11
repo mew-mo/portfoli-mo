@@ -93,6 +93,21 @@ a {
   transform: $scale;
 }
 
+@mixin img-caption($scale: scale(0)) {
+  letter-spacing: 0;
+  transform: $scale;
+  position: relative;
+  z-index: 99;
+  transition: all 280ms ease-in-out;
+  text-shadow: -1px 4px 11px rgba(0,0,0,0.61);
+}
+
+@mixin img-caption-hov($scale: scale(1), $space: 5px) {
+  transform: $scale;
+  letter-spacing: $space;
+  transition: all 280ms ease-in-out;
+}
+
 
 // nav
 // ======================
@@ -351,24 +366,17 @@ nav ul {
 
 
   &:not(:last-child) {
-      margin-right: $main-margins;
+    margin-right: $main-margins;
   }
 
   h5 {
-    letter-spacing: 0;
-    transform: scale(0);
-    position: relative;
-    z-index: 99;
-    transition: all 280ms ease-in-out;
-    text-shadow: -1px 4px 11px rgba(0,0,0,0.61);
+    @include img-caption;
   }
 
   &:hover {
 
     h5 {
-      transform: scale(1);
-      letter-spacing: 5px;
-      transition: all 280ms ease-in-out;
+      @include img-caption-hov;
     }
 
     .circle-img {
@@ -464,17 +472,43 @@ nav ul {
     margin-top: 70px;
   }
 
+  .caption-wrapper {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    h5 {
+      @include img-caption;
+    }
+  }
+
+  .img-container {
+    position: relative;
+    transition: all 280ms ease-in-out;
+
+
+    &:hover:not(:first-child) {
+      @include filter;
+    }
+
+    &:hover .caption-wrapper h5 {
+      @include img-caption-hov;
+      filter: none;
+    }
+  }
+
   .img-container img {
     width: 100%;
     border-radius: 18px;
     transition: all 280ms ease-in-out;
-
-
-    &:hover {
-      @include filter;
-    }
   }
+
 }
+
+
 
 // footer
 // ======================

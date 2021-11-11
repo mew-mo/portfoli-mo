@@ -9,40 +9,59 @@
   // ==================
 
   var web = [
-    miniFoli = {
-      id: 'minifoli',
-      title: 'Mini Portfolio',
-      img: 'img/minifoli.png'
-    },
     mrGos = {
       id: 'mrgos',
       title: 'Mr Go\'s',
-      img: 'img/mrgos.png'
+      img: 'img/mrgos.png',
+      link: 'https://drive.google.com/file/d/1aBpMzEfH1WXK_LerwuhTl0LmyPtNvZZ1/view',
+      brief: 'A fully responsive wordpress website',
+      tools: ['Wordpress'],
+      description: 'wormwomrowmrow'
     },
     burgerLiquor = {
       id: 'burgerliquor',
       title: 'Burger Liquor',
-      img: 'img/burgerliquor.png'
+      img: 'img/burgerliquor.png',
+      link: 'https://projects.invisionapp.com/prototype/BURGERLIQUOR-PROTOTYPE-fix-cka6dntzz008so1011fozkojn/play/3fbac871',
+      brief: 'A prototype created through UX research and teamwork',
+      tools: ['Invision'],
+      description: ''
     },
     kilRec = {
       id: 'kilrec',
       title: 'Kilbirnie Rec Centre',
-      img: 'img/kilbirnierec.png'
+      img: 'img/kilbirnierec.png',
+      link: 'https://www.figma.com/proto/GQNTpCs7ciIL5j9meuyf5E/kilbirnie-rec-centre-prototype-collab-WORKING?node-id=93%3A184&scaling=scale-down',
+      brief: 'A prototype created through UX research and teamwork',
+      tools: ['Figma'],
+      description: ''
     },
     sweetAs = {
       id: 'sweetas',
       title: 'Sweet As',
-      img: 'img/sweetas.png'
+      img: 'img/sweetas.png',
+      link: 'https://github.com/mew-mo/sweet-as',
+      brief: 'A html/css/js site',
+      tools: ['atom', 'npm', 'gulp'],
+      description: ''
     },
     needAHand = {
       id: 'needahand',
       title: 'Need A Hand',
-      img: 'img/needahand.png'
+      img: 'img/needahand.png',
+      link: 'https://github.com/mew-mo/need-a-hand',
+      brief: 'A fullstack site developed with an agile team',
+      tools: ['atom', 'npm', 'mongoDB', 'grunt'],
+      description: ''
     },
     seaLionTrust = {
       id: 'nzslt',
       title: 'NZ Sea Lion Trust',
-      img: 'img/nzslt.png'
+      img: 'img/nzslt.png',
+      link: 'https://github.com/mew-mo/nz-sea-lion-trust',
+      brief: 'A simple html/css/js site',
+      tools: ['atom', 'koala'],
+      description: ''
     }
   ];
 
@@ -166,11 +185,25 @@
       for (var i = 0; i < web.length; i++) {
         if (web[i].id == sessionStorage.selected) {
           appWuxProj.selectedPage = web[i];
-          console.log(appWuxProj.selectedPage);
         } //if
       } //for
 
-      document.querySelector('#wuxProj').innerHTML += `We got the ${appWuxProj.selectedPage.title}`;
+      document.querySelector('.proj-title').innerHTML = appWuxProj.selectedPage.title;
+
+      document.querySelector('.proj-brief').innerHTML = appWuxProj.selectedPage.brief;
+
+      document.querySelector('.proj-tools').innerHTML = appWuxProj.selectedPage.tools;
+
+      document.querySelector('.proj-desc').innerHTML = appWuxProj.selectedPage.description;
+
+      document.querySelector('.proj-img a').href = appWuxProj.selectedPage.link;
+
+      document.querySelector('.proj-img img').src = appWuxProj.selectedPage.img;
+
+      document.title += `  ${appWuxProj.selectedPage.title}`;
+
+
+      // document.querySelector('#wuxProj').innerHTML += `We got the ${appWuxProj.selectedPage.title}`;
     }
 
 
