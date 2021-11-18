@@ -488,16 +488,6 @@ nav ul {
   .img-container {
     position: relative;
     transition: all 280ms ease-in-out;
-
-
-    &:hover:not(:first-child) {
-      @include filter;
-    }
-
-    &:hover .caption-wrapper h5 {
-      @include img-caption-hov;
-      filter: none;
-    }
   }
 
   .img-container img {
@@ -508,7 +498,36 @@ nav ul {
 
 }
 
+.go-to-proj-btn {
+  cursor: pointer;
 
+  h5 {
+    @include img-caption;
+    text-shadow: none;
+    top: 13px;
+  }
+
+  &:hover {
+    .arrow-icon {
+      transform: translate3d(5px, 0, 0);
+    }
+
+    .arrow-icon--circle {
+      stroke-dashoffset: 0;
+    }
+
+    h5 {
+      @include img-caption-hov;
+    }
+  }
+}
+
+.back-to-all {
+  margin-top: $main-margins;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 // footer
 // ======================

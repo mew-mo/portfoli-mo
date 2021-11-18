@@ -16,7 +16,7 @@
       link: 'https://drive.google.com/file/d/1aBpMzEfH1WXK_LerwuhTl0LmyPtNvZZ1/view',
       brief: 'A fully responsive wordpress website',
       tools: ['Wordpress'],
-      description: 'wormwomrowmrow'
+      description: 'In this project I designed and created a website for Mr Go\'s, an Asian Fusion restaurant based in Wellington, redesigning their current website. I used a prebuilt wordpress theme for this, and focused on simplifying the navigation and overall usability of the site through several rounds of user testing.'
     },
     burgerLiquor = {
       id: 'burgerliquor',
@@ -25,7 +25,7 @@
       link: 'https://projects.invisionapp.com/prototype/BURGERLIQUOR-PROTOTYPE-fix-cka6dntzz008so1011fozkojn/play/3fbac871',
       brief: 'A prototype created through UX research and teamwork',
       tools: ['Invision'],
-      description: ''
+      description: 'This was a UX project in collaboration with Rachel Kibblewhite, Kris Furer and Matt Brown. The four of us created a prototype for Burger Liquor\'s online ordering app through user testing and iterating off what we learned until resulting in the final.'
     },
     kilRec = {
       id: 'kilrec',
@@ -34,7 +34,7 @@
       link: 'https://www.figma.com/proto/GQNTpCs7ciIL5j9meuyf5E/kilbirnie-rec-centre-prototype-collab-WORKING?node-id=93%3A184&scaling=scale-down',
       brief: 'A prototype created through UX research and teamwork',
       tools: ['Figma'],
-      description: ''
+      description: 'This was a UX project in collaboration with Rachel Kibblewhite, Kris Furer and Matt Brown. Our project acts as an event planner for the Kilbirnie Recreation Centre, where you can book to join events and view details on said events. We went through the process of UX research extensively to come up with the design, user flow, and overall nagation of the application prototype.'
     },
     sweetAs = {
       id: 'sweetas',
@@ -61,6 +61,15 @@
       link: 'https://github.com/mew-mo/nz-sea-lion-trust',
       brief: 'A simple html/css/js site',
       tools: ['atom', 'koala'],
+      description: ''
+    },
+    cc = {
+      id: 'cc',
+      title: 'Clockwork Creative',
+      img: 'img/clockwork.png',
+      link: 'https://github.com/mew-mo/clockwork-creative',
+      brief: 'A custom Wordpress Theme with customization controls',
+      tools: ['atom', 'wordpress', 'phpmyadmin'],
       description: ''
     }
   ];
@@ -196,7 +205,7 @@
 
       document.querySelector('.proj-desc').innerHTML = appWuxProj.selectedPage.description;
 
-      document.querySelector('.proj-img a').href = appWuxProj.selectedPage.link;
+      document.querySelector('.go-to-proj-btn a').href = appWuxProj.selectedPage.link;
 
       document.querySelector('.proj-img img').src = appWuxProj.selectedPage.img;
 
