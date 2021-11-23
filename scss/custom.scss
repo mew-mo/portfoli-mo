@@ -639,6 +639,48 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .wiggle,
+  h3 {
+    display: inline-block;
+  }
+
+  .wiggle {
+    top: -20px;
+  }
+
+  h6 {
+    text-align: center;
+  }
+
+  form {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  input,
+  textarea {
+    margin-top: 30px;
+    width: 60%;
+    border-radius: 15px;
+    border: 1px solid $main;
+    padding: 10px;
+
+    &:focus-visible {
+      outline: none;
+      border: 1px solid $accent;
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    color: $accent;
+    font-size: 1.6rem;
+    @extend .link-hov;
+  }
 }
 
 // media queries
