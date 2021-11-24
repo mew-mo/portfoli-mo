@@ -43,7 +43,7 @@
       link: 'https://github.com/mew-mo/sweet-as',
       brief: 'A html/css/js site',
       tools: ['atom', 'npm', 'gulp'],
-      description: ''
+      description: 'A fictional promotional website made for booking short trips to Queenstown. Using Javascript and the mapbox API, you are able to book your accommodation.'
     },
     needAHand = {
       id: 'needahand',
@@ -52,7 +52,7 @@
       link: 'https://github.com/mew-mo/need-a-hand',
       brief: 'A fullstack site developed with an agile team',
       tools: ['atom', 'npm', 'mongoDB', 'grunt'],
-      description: ''
+      description: 'A project in collaboration with <a href="https://github.com/cchhiba">Charissa Chhiba</a>, <a href="https://github.com/ambarrose">Ambar Williams</a> and <a href="https://github.com/beecurrie">Bee Currie</a>. Following the agile process and rotating roles between Scrum Master, Product owner and devs, we developed a fullstack application that functions as a job hub for students to find work and employers to post jobs and potentially find new employees.'
     },
     seaLionTrust = {
       id: 'nzslt',
@@ -61,7 +61,7 @@
       link: 'https://github.com/mew-mo/nz-sea-lion-trust',
       brief: 'A simple html/css/js site',
       tools: ['atom', 'koala'],
-      description: ''
+      description: 'A simple website for the NZ Sea Lion Trust made with HTML, CSS and Javascript, redesigning their current website. The design was formed through several different kinds of UX research.'
     },
     cc = {
       id: 'cc',
@@ -70,7 +70,7 @@
       link: 'https://github.com/mew-mo/clockwork-creative',
       brief: 'A custom Wordpress Theme with customization controls',
       tools: ['atom', 'wordpress', 'phpmyadmin'],
-      description: ''
+      description: 'A custom wordpress theme for Clockwork Creative, a video production company. Customisation controls are coded into the website fully, and security, performance optimisation and SEO were focused on when building the site.'
     }
   ];
 
@@ -151,8 +151,68 @@
       id: '1025',
       title: '1025',
       img: 'img/1025.png'
+    },
+    wtss = {
+      id: 'wtss',
+      title: 'where the sea sleeps',
+      img: 'img/wtss.png'
+    },
+    swsh = {
+      id: 'swsh',
+      title: 'sword & shield',
+      img: 'img/swsh.png'
+    },
+    deltarune = {
+      id: 'deltarune',
+      title: 'deltarune',
+      img: 'img/deltarune.png'
     }
   ];
+
+  // All Pages
+
+  const nav = document.querySelector('#mobileNav');
+  const menu = document.querySelector('#menu');
+  const menuToggle = document.querySelector('.nav__toggle');
+  let isMenuOpen = false;
+
+
+  // TOGGLE MENU ACTIVE STATE
+  menuToggle.addEventListener('click', e => {
+    e.preventDefault();
+    isMenuOpen = !isMenuOpen;
+
+    // toggle a11y attributes and active class
+    menuToggle.setAttribute('aria-expanded', String(isMenuOpen));
+    menu.hidden = !isMenuOpen;
+    nav.classList.toggle('nav--open');
+  });
+
+
+  // TRAP TAB INSIDE NAV WHEN OPEN
+  nav.addEventListener('keydown', e => {
+    // abort if menu isn't open or modifier keys are pressed
+    if (!isMenuOpen || e.ctrlKey || e.metaKey || e.altKey) {
+      return;
+    }
+
+    // listen for tab press and move focus
+    // if we're on either end of the navigation
+    const menuLinks = menu.querySelectorAll('.nav__link');
+    if (e.keyCode === 9) {
+      if (e.shiftKey) {
+        if (document.activeElement === menuLinks[0]) {
+          menuToggle.focus();
+          e.preventDefault();
+        }
+      } else if (document.activeElement === menuToggle) {
+        menuLinks[0].focus();
+        e.preventDefault();
+      }
+    }
+  });
+
+  // arf arf
 
 
   // INDEX.HTML
@@ -426,9 +486,7 @@
       window.addEventListener('click', (e) => {
         if (e.target.parentNode.className == 'project') {
           sessionStorage.setItem('selected', e.target.parentNode.id);
-
           appDigi.setup();
-
         } //if e target
       }, false);
     },
