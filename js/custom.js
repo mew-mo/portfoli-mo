@@ -1,13 +1,10 @@
 (function() {
 
-  console.log('linked up bestie :)');
-
   // project objects!
   // ==========================================
 
   // web/ux arr
   // ==================
-
   var web = [
     mrGos = {
       id: 'mrgos',
@@ -170,7 +167,7 @@
   ];
 
   // All Pages
-
+  // ==========================================
   const nav = document.querySelector('#mobileNav');
   const menu = document.querySelector('#menu');
   const menuToggle = document.querySelector('.nav__toggle');
@@ -187,7 +184,6 @@
     menu.hidden = !isMenuOpen;
     nav.classList.toggle('nav--open');
   });
-
 
   // TRAP TAB INSIDE NAV WHEN OPEN
   nav.addEventListener('keydown', e => {
@@ -212,7 +208,22 @@
     }
   });
 
-  // arf arf
+  // making it unscrollable if the mobile nav is open
+  window.addEventListener('click', (e) => {
+    if (document.querySelector('.nav__toggle').ariaExpanded == 'false') {
+      setTimeout(() => {
+        document.querySelector('body').style.overflow = 'auto';
+      }, 700);
+      // settimeout because the scrollbar was bothering me immensely
+    } else if (document.querySelector('.nav__toggle').ariaExpanded == 'true') {
+      document.querySelector('body').style.overflow = 'hidden';
+    }
+    // close menu if ur clickin work
+    if (e.target.innerHTML === 'work') {
+      document.querySelector('.nav__toggle').click();
+    }
+  }, false);
+  // mobile nav ends
 
 
   // INDEX.HTML
@@ -229,7 +240,6 @@
 
     heroAnims: () => {
       document.querySelector('.link--arrowed').addEventListener('click', () => {
-        console.log('YO');
 
         document.querySelector('.entry-txt h1').classList.add = 'vanish';
 
@@ -238,10 +248,11 @@
         //   scale: 0.2,
         //   marginLeft: '-90px',
         // });
-        anime({
-          targets: appHome.subtitle,
-          scale: 0.2,
-        });
+        alert('you found a button that doesnt do anything (cool) yet! but dont worry, i have plans :)');
+        // anime({
+        //   targets: appHome.subtitle,
+        //   scale: 0.2,
+        // });
       }, false);
     }
   }; //appHome ends

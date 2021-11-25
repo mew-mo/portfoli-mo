@@ -224,6 +224,14 @@ nav ul {
   height: 50px;
 }
 
+#menu {
+  z-index: 99;
+}
+
+.splash {
+  z-index: 2;
+}
+
 #mobileNav {
   display: none;
   justify-content: center;
@@ -408,8 +416,7 @@ nav ul {
     }
   }
 }
-
-// ARF ARF
+// mobile nav ends
 
 // index.html
 // ============================================
@@ -476,6 +483,7 @@ nav ul {
   width: 200px;
   position: relative;
   margin-bottom: -8px;
+  z-index: -10;
   display: inline-block;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23FF6B6B' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
   background-position: 0 100%;
@@ -663,6 +671,17 @@ nav ul {
 
   h5 {
     display: inline;
+  }
+
+  a {
+    color: $main;
+    font-size: inherit;
+    transition: all 280ms ease-in-out;
+  }
+
+  a:hover {
+    color: $accent;
+    transition: all 280ms ease-in-out;
   }
 
   .wiggle {
@@ -947,6 +966,14 @@ footer {
 // ======================
 @media only screen and (max-width: 600px) {
 
+  * {
+    font-size: 12px;
+  }
+
+  a.link {
+    font-size: 2rem;
+  }
+
   #mobileNav {
     display: flex;
   }
@@ -986,15 +1013,14 @@ footer {
   }
 
   .section-work {
-    margin-top: 270px;
-    padding-bottom: 400px;
+    padding-bottom: 500px;
 
     .wiggle {
       width: 90px;
     }
 
     .work-types {
-      margin: 370px 0 0 35%;
+      margin: 500px 0 0 35%;
 
       .circle-container {
         margin-top: 70px;
@@ -1006,7 +1032,205 @@ footer {
     margin-top: 50px;
 
     .wiggle {
-      width: 25px;
+      display: block;
+      padding: 15px 0;
+      margin-left: 25%;
+      width: 255px;
+      top: 0;
     }
+
+    .work-txt {
+      .wiggle {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .section-abt {
+    .me-img,
+    .abt-txt {
+      width: 100%;
+    }
+
+    .me-img {
+      margin-left: 0;
+    }
+
+    .circle-container {
+      height: 300px;
+      width: 300px;
+    }
+  }
+
+  .section-contact {
+    .wiggle {
+      display: block;
+      padding: 15px 0;
+      margin-left: 35px;
+    }
+
+    h6 {
+      margin-top: 25px;
+    }
+
+    input, textarea {
+      width: 100%;
+    }
+  }
+
+  .section-wux-proj {
+    display: block;
+    padding-top: 70px;
+
+    .proj-img {
+      width: 90%;
+      margin: 0 0 0 5%;
+    }
+
+    .proj-info {
+      width: 100%;
+      margin: 0;
+
+      .proj-title,
+      .proj-brief,
+      .proj-desc,
+      .go-to-proj-btn {
+        padding: 20px;
+      }
+
+      .proj-desc {
+        margin-top: 20px;
+      }
+
+    }
+  }
+
+  .back-to-all {
+    margin-top: 70px;
+  }
+
+  .section-img-overlay {
+    z-index: 1;
+
+    img {
+      height: 60vh;
+      width: auto;
+    }
+
+    h3, a {
+      display: block;
+      text-align: center;
+    }
+
+    a {
+      margin-top: 30px;
+    }
+  }
+}
+
+// tablets
+// ======================
+@media only screen and (min-width: 600px) and (max-width: 1100px) {
+
+  * {
+    font-size: 13px;
+  }
+
+  a.link {
+    font-size: 2rem;
+  }
+
+  #mobileNav {
+    display: flex;
+  }
+
+  #mobileNav ul {
+    margin-top: 70%;
+  }
+
+  .mobile-nav {
+    display: inherit;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .hero-img img {
+    width: 100%;
+    margin-top: 20%;
+  }
+
+  .hero-txt {
+    .entry-txt,
+    .change-hero-txt {
+      margin-left: 30px;
+    }
+  }
+
+  .circle-container,
+  .bubble {
+    height: 300px;
+    width: 300px;
+  }
+
+  .circle-container:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .section-abt {
+    display: block;
+
+    .me-img,
+    .abt-txt {
+      width: 100%;
+      text-align: center;
+    }
+
+    .me-img {
+      margin-left: 0;
+    }
+
+    .abt-txt {
+      p {
+        padding: 10px 170px;
+      }
+    }
+
+    .circle-container {
+      height: 300px;
+      width: 300px;
+    }
+  }
+
+  .section-wux-proj {
+    display: block;
+    padding-top: 70px;
+
+    .proj-img {
+      width: 90%;
+      margin: 0 0 0 5%;
+    }
+
+    .proj-info {
+      width: 100%;
+      margin: 0;
+
+      .proj-title,
+      .proj-brief,
+      .proj-subtitle,
+      .proj-desc,
+      .go-to-proj-btn {
+        padding: 10px 70px;
+      }
+
+      .proj-desc {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .back-to-all {
+    margin-top: 70px;
   }
 }
