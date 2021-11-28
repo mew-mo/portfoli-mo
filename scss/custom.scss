@@ -113,7 +113,6 @@ a {
   transition: all 280ms ease-in-out;
 }
 
-
 // nav
 // ======================
 
@@ -164,7 +163,6 @@ nav ul {
   position: relative;
   width: 100%;
 }
-
 
 .link-hov {
   letter-spacing: 0;
@@ -443,7 +441,6 @@ nav ul {
   top: 95vh;
 }
 
-
 // landing section
 // ======================
 
@@ -494,8 +491,11 @@ nav ul {
 
 .hero-img {
   width: 50%;
-}
 
+  img {
+    width: 90%;
+  }
+}
 
 .arrows {
   display: inline-block;

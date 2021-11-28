@@ -173,7 +173,6 @@
   const menuToggle = document.querySelector('.nav__toggle');
   let isMenuOpen = false;
 
-
   // TOGGLE MENU ACTIVE STATE
   menuToggle.addEventListener('click', e => {
     e.preventDefault();
@@ -254,6 +253,81 @@
         //   scale: 0.2,
         // });
       }, false);
+
+      gsap.from('.title', {
+        scrollTrigger: {
+          trigger: '.title',
+          scrub: true
+        },
+        autoAlpha: 0,
+        translateX: -302,
+        duration: 1,
+        repeat: false,
+        ease: 'easeInOutCirc'
+      });
+
+      gsap.from('.subtitle', {
+        scrollTrigger: {
+          trigger: '.subtitle',
+          scrub: true
+        },
+        autoAlpha: 0,
+        translateX: -302,
+        delay: 1,
+        duration: 1,
+        repeat: false,
+        ease: 'easeInOutCirc'
+      });
+
+      gsap.from('.i-subtitle', {
+        scrollTrigger: {
+          trigger: '.subtitle',
+          scrub: true
+        },
+        autoAlpha: 0,
+        delay: 2,
+        duration: 1,
+        repeat: false,
+        ease: 'easeInOutCirc'
+      });
+
+    //   const anim = gsap.fromTo('.section-work',
+    //     {autoAlpha: 0, y: 50},
+    //     {duration: 1, autoAlpha: 1, y: 0});
+    //     ScrollTrigger.create: ({
+    //       trigger: '.section-work',
+    //       // start: 'top',
+    //       animation: anim,
+    //       // end: '100% bottom',
+    //       scrub: true
+    //     });
+    // });
+
+    // gsap.fromTo('.section-work', {
+    //     autoAlpha: 0,
+    //     y: 50
+    //   }, {
+    //     scrollTrigger: {
+    //       trigger: '.work-txt',
+    //       start: 'top',
+    //       scrub: 0.5
+    //     },
+    //     // duration: 1,
+    //     autoAlpha: 1,
+    //     y: 0
+    //   });
+
+      // gsap.to('.section-work', { autoAlpha: 1,
+      //   scrollTrigger: {
+      //     trigger: '.section-landing',
+      //     start: 'top top+100',
+      //     // trigger when the element is 100px from the top of the viewport
+      //     scrub: true,
+      //     end: '+= 200',
+      //     // will end after scrolling 200px beyond the start
+      //     // markers: true
+      //   }
+      // });
     }
   }; //appHome ends
 
@@ -285,7 +359,9 @@
 
       setInterval(appWux.anims, 1000);
 
-      appWux.anims();
+      window.addEventListener('load', () => {
+        appWux.anims();
+      }, false);
     },
 
     anims: () => {
@@ -378,7 +454,9 @@
 
       setInterval(appGraphic.anims, 1000);
 
-      appGraphic.anims();
+      window.addEventListener('load', () => {
+        appGraphic.anims();
+      }, false);
     },
 
     anims: () => {
@@ -472,7 +550,9 @@
 
       setInterval(appDigi.anims, 1000);
 
-      appDigi.anims();
+      window.addEventListener('load', () => {
+        appDigi.anims();
+      }, false);
     },
 
     anims: () => {
