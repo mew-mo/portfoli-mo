@@ -303,6 +303,33 @@
     //     });
     // });
 
+    var tl = gsap.timeline({
+      scrollTrigger: '.work-txt',
+      scrub: true,
+      ease: 'sine.inOut',
+      markers: true,
+      start: 'top top',
+      end: 'bottom',
+      startColor: 'green',
+      endColor: 'red',
+      fontSize: '12px'
+    });
+
+    tl
+      .set('.section-work', {
+        opacity: 0,
+        y: 50,
+      })
+      .to('.section-work', {
+        duration: 1,
+        opacity: 1,
+        y: 0
+      });
+      // solved my prob here
+      // https://greensock.com/forums/topic/24456-markers-and-scrolltrigger-not-working/
+
+
+    //
     // gsap.fromTo('.section-work', {
     //     autoAlpha: 0,
     //     y: 50
@@ -359,9 +386,17 @@
 
       setInterval(appWux.anims, 1000);
 
+      document.querySelector('.loader-container').style.opacity = 1;
+      document.querySelector('.loader-container').style.display = 'flex';
+
+      document.querySelector('.work-bbls').style.opacity = 0;
+
       window.addEventListener('load', () => {
+        document.querySelector('.loader-container').style.opacity = 0;
+        document.querySelector('.loader-container').style.display = 'none';
+        document.querySelector('.work-bbls').style.opacity = 1;
         appWux.anims();
-      }, false);
+      });
     },
 
     anims: () => {
@@ -454,9 +489,17 @@
 
       setInterval(appGraphic.anims, 1000);
 
+      document.querySelector('.loader-container').style.opacity = 1;
+      document.querySelector('.loader-container').style.display = 'flex';
+
+      document.querySelector('.work-bbls').style.opacity = 0;
+
       window.addEventListener('load', () => {
+        document.querySelector('.loader-container').style.opacity = 0;
+        document.querySelector('.loader-container').style.display = 'none';
+        document.querySelector('.work-bbls').style.opacity = 1;
         appGraphic.anims();
-      }, false);
+      });
     },
 
     anims: () => {
@@ -550,9 +593,17 @@
 
       setInterval(appDigi.anims, 1000);
 
+      document.querySelector('.loader-container').style.opacity = 1;
+      document.querySelector('.loader-container').style.display = 'flex';
+
+      document.querySelector('.work-bbls').style.opacity = 0;
+
       window.addEventListener('load', () => {
+        document.querySelector('.loader-container').style.opacity = 0;
+        document.querySelector('.loader-container').style.display = 'none';
+        document.querySelector('.work-bbls').style.opacity = 1;
         appDigi.anims();
-      }, false);
+      });
     },
 
     anims: () => {

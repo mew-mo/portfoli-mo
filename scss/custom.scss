@@ -619,6 +619,24 @@ nav ul {
 // wux.html
 // ============================================
 
+.loader-container {
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  align-items: center;
+  justify-content: center;
+  transition: all 280ms ease-in-out;
+
+  .loader-content {
+    text-align: center;
+  }
+
+  .loader {
+    height: 100px;
+  }
+}
+
 .section-wux {
   @extend .section-work;
   height: 140vh;
