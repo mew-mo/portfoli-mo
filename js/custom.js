@@ -22,7 +22,7 @@
       link: 'https://projects.invisionapp.com/prototype/BURGERLIQUOR-PROTOTYPE-fix-cka6dntzz008so1011fozkojn/play/3fbac871',
       brief: 'A prototype created through UX research and teamwork',
       tools: ['Invision'],
-      description: 'This was a UX project in collaboration with Rachel Kibblewhite, Kris Furer and Matt Brown. The four of us created a prototype for Burger Liquor\'s online ordering app through user testing and iterating off what we learned until resulting in the final.'
+      description: 'This was a UX project in collaboration with Rachel Kibblewhite, <a href="https://github.com/Kris-Furer" target="_blank">Kris Furer</a> and <a href="https://github.com/M-brown23" target="_blank">Matt Brown</a>. The four of us created a prototype for Burger Liquor\'s online ordering app through user testing and iterating off what we learned until resulting in the final.'
     },
     kilRec = {
       id: 'kilrec',
@@ -31,16 +31,18 @@
       link: 'https://www.figma.com/proto/GQNTpCs7ciIL5j9meuyf5E/kilbirnie-rec-centre-prototype-collab-WORKING?node-id=93%3A184&scaling=scale-down',
       brief: 'A prototype created through UX research and teamwork',
       tools: ['Figma'],
-      description: 'This was a UX project in collaboration with Rachel Kibblewhite, Kris Furer and Matt Brown. Our project acts as an event planner for the Kilbirnie Recreation Centre, where you can book to join events and view details on said events. We went through the process of UX research extensively to come up with the design, user flow, and overall nagation of the application prototype.'
+      description: 'This was a UX project in collaboration with Rachel Kibblewhite, <a href="https://github.com/Kris-Furer" target="_blank">Kris Furer</a> and <a href="https://github.com/M-brown23" target="_blank">Matt Brown</a>. Our project acts as an event planner for the Kilbirnie Recreation Centre, where you can book to join events and view details on said events. We went through the process of UX research extensively to come up with the design, user flow, and overall nagation of the application prototype.',
+      iDid: 'Conducted UX research with a team. Conceptualised the design as a team and iterated from user testing. Lead the UX survey and timeline, ensured our group was on track relative to the timeline and tracking milestones.'
     },
     sweetAs = {
       id: 'sweetas',
       title: 'Sweet As',
       img: 'img/sweetas.png',
       link: 'https://github.com/mew-mo/sweet-as',
-      brief: 'A html/css/js site',
-      tools: ['atom', 'npm', 'gulp'],
-      description: 'A fictional promotional website made for booking short trips to Queenstown. Using Javascript and the mapbox API, you are able to book your accommodation.'
+      brief: 'A frontend site',
+      tools: ['html', 'scss', 'js'],
+      description: 'A fictional promotional website for Tourism New Zealand made for booking short trips to Queenstown. With this application, you can book a 15-day-max trip, view accommodation and add complimentary meals.',
+      iDid: 'Coded in HTML, SCSS and JS using a Gulp compiler. Managed packages with npm/node.js. I created the design and prototyped it in figma. Used the Mapbox API for the accommodation selection, and a few extra plugins and libraries for effects.'
     },
     needAHand = {
       id: 'needahand',
@@ -48,26 +50,29 @@
       img: 'img/needahand.png',
       link: 'https://github.com/mew-mo/need-a-hand',
       brief: 'A fullstack site developed with an agile team',
-      tools: ['atom', 'npm', 'mongoDB', 'grunt'],
-      description: 'A project in collaboration with <a href="https://github.com/cchhiba">Charissa Chhiba</a>, <a href="https://github.com/ambarrose">Ambar Williams</a> and <a href="https://github.com/beecurrie">Bee Currie</a>. Following the agile process and rotating roles between Scrum Master, Product owner and devs, we developed a fullstack application that functions as a job hub for students to find work and employers to post jobs and potentially find new employees.'
+      tools: ['html', 'scss', 'js', 'mongoDB'],
+      description: 'Need-A-Hand is a made up company, with a fullstack website that acts as a hub to connect students and emplpoyers for work. Created in collaboration with <a href="https://github.com/cchhiba" target="_blank">Charissa Chhiba</a>, <a href="https://github.com/ambarrose" target="_blank">Ambar Williams</a> and <a href="https://github.com/beecurrie" target="_blank">Bee Currie</a>.',
+      iDid: 'Followed the agile process, acting as a scrum master, product owner and developer during different sprints. Had daily standup meetings. Coded HTML, SCSS and JS with a Grunt compiler. Managed packages with npm/node.js. Managed a group Github repository, including merging and conflict resolution. Managed a noSQL MongoDB database as an API and coded POST, GET, PATCH and DELETE methods. Conceptualised the design with the group in figma.'
     },
     seaLionTrust = {
       id: 'nzslt',
       title: 'NZ Sea Lion Trust',
       img: 'img/nzslt.png',
       link: 'https://github.com/mew-mo/nz-sea-lion-trust',
-      brief: 'A simple html/css/js site',
-      tools: ['atom', 'koala'],
-      description: 'A simple website for the NZ Sea Lion Trust made with HTML, CSS and Javascript, redesigning their current website. The design was formed through several different kinds of UX research.'
+      brief: 'A simple static frontend site',
+      tools: ['html', 'scss', 'js'],
+      description: 'The New Zealand Sea Lion Trust are a non-profit organisation who were in need of a website redeign. <br> <span class="note">Note: The premise for this project was enitrely fictional and in no way actually represents the New Zealand Sea Lion Trust.</span>',
+      iDid: 'Made with HTML, SCSS and Javascript (and a cheeky slick slider plugin), I redesigned their <a href="https://www.sealiontrust.org.nz/" target="_blank">current website</a>. I used Koala to compile the sass (I never will again). The design was formed through several different kinds of UX research. I remade their logo in Illustrator, and created the landing illustration as well. I created the design and prototyped it in figma. <br> <span class="note">Note: All copy, media used and logo design belong to the New Zealand Sea Lion Trust fully. They were not created by and do not belong to me.</span>'
     },
     cc = {
       id: 'cc',
       title: 'Clockwork Creative',
       img: 'img/clockwork.png',
-      link: 'https://github.com/mew-mo/clockwork-creative',
+      link: 'http://mo.yoobee.site/',
       brief: 'A custom Wordpress Theme with customization controls',
-      tools: ['atom', 'wordpress', 'phpmyadmin'],
-      description: 'A custom wordpress theme for Clockwork Creative, a video production company. Customisation controls are coded into the website fully, and security, performance optimisation and SEO were focused on when building the site.'
+      tools: ['php', 'html', 'css', 'js', 'wordpress'],
+      description: 'Clockwork Creative is a video production company based in Wellington. They needed a website that would act as a way to view their latest projects, learn about them, see what services they offer, purchase merchandise and contact them. <br> <span class="note">Note: The premise for this project was enitrely fictional and in no way actually represents Clockwork Creative.</span>',
+      iDid: 'For this project, I coded the theme custom fully in PHP and CSS with elements of HTML, JS. Customisation controls were coded into the theme for the client\'s ease. Security, performance optimisation and SEO were focused on when building the site, utilising plugins to help these aspects. I created the design and prototyped it in figma. <br> <span class="note">Note: All copy, media used and logo belong to Clockwork Creative fully. They were not created by and do not belong to me.</span>'
     }
   ];
 
@@ -127,7 +132,7 @@
       link: 'https://drive.google.com/uc?id=1QjWa76DebVS1aXojGLTiPZVuxXitumvu',
       brief: 'An alphabet chart for Maori Language Week',
       tools: ['photoshop', 'illustrator'],
-      description: 'A project made in collaboration with Rane Magno. We created this alphabet chart for Maori Language Week with the theme of constellations and stars, which are of huge cultural importance to Maori people.'
+      description: 'A project made in collaboration with <a href="https://github.com/rraneighh" target="_blank">Rane Magno</a>. We created this alphabet chart for Maori Language Week with the theme of constellations and stars, which are of huge cultural importance to Maori people.'
     },
     snowdin = {
       id: 'snowdin',
@@ -447,11 +452,13 @@
 
       document.querySelector('.proj-title').innerHTML = appWuxProj.selectedPage.title;
 
-      document.querySelector('.proj-brief').innerHTML = appWuxProj.selectedPage.brief;
+      document.querySelector('.proj-desc').innerHTML = appWuxProj.selectedPage.description;
 
       document.querySelector('.proj-tools').innerHTML = appWuxProj.selectedPage.tools;
 
-      document.querySelector('.proj-desc').innerHTML = appWuxProj.selectedPage.description;
+      document.querySelector('.proj-brief').innerHTML = appWuxProj.selectedPage.brief;
+
+      document.querySelector('.proj-idid').innerHTML = appWuxProj.selectedPage.iDid;
 
       document.querySelector('.go-to-proj-btn a').href = appWuxProj.selectedPage.link;
 

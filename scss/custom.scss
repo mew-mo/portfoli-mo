@@ -90,6 +90,16 @@ a {
   text-decoration: none;
 }
 
+span {
+  font-size: inherit;
+}
+
+.note {
+  font-style: italic;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
 // mixins
 // ======================
 @mixin filter($scale: scale(1.1),) {
@@ -657,15 +667,18 @@ nav ul {
   @extend .circle-container;
   animation-timing-function: linear;
   transition: all 280ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+
+    .bubble img {
+      transform: scale(1);
+    }
+  }
 }
 
 .bubble img {
   @extend .circle-img;
-  transform: scale(1);
-
-  &:hover {
-    transform: scale(1);
-  }
 }
 
 // wux-proj.html
@@ -714,8 +727,10 @@ nav ul {
     }
   }
 
-  .proj-desc {
-    margin-top: 70px;
+  .proj-desc,
+  .proj-idid {
+    margin-top: 20px;
+    margin-bottom: 50px;
   }
 
   .caption-wrapper {
@@ -725,10 +740,6 @@ nav ul {
     width: 100%;
     justify-content: center;
     align-items: center;
-
-    h5 {
-      @include img-caption;
-    }
   }
 
   .img-container {
@@ -769,7 +780,7 @@ nav ul {
 }
 
 .back-to-all {
-  margin-top: $main-margins;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1124,7 +1135,7 @@ footer {
   }
 
   .back-to-all {
-    margin-top: 70px;
+    margin-top: 50px;
   }
 
   .section-img-overlay {
