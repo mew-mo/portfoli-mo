@@ -22,7 +22,8 @@
       link: 'https://projects.invisionapp.com/prototype/BURGERLIQUOR-PROTOTYPE-fix-cka6dntzz008so1011fozkojn/play/3fbac871',
       brief: 'A prototype created through UX research and teamwork',
       tools: ['Invision'],
-      description: 'This was a UX project in collaboration with Rachel Kibblewhite, <a href="https://github.com/Kris-Furer" target="_blank">Kris Furer</a> and <a href="https://github.com/M-brown23" target="_blank">Matt Brown</a>. The four of us created a prototype for Burger Liquor\'s online ordering app through user testing and iterating off what we learned until resulting in the final.'
+      description: 'This was a UX project in collaboration with Rachel Kibblewhite, <a href="https://github.com/Kris-Furer" target="_blank">Kris Furer</a> and <a href="https://github.com/M-brown23" target="_blank">Matt Brown</a>. The four of us created a prototype for Burger Liquor\'s online ordering app through user testing and iterating off what we learned until resulting in the final.  <br> <span class="note">Note: The premise for this project was enitrely fictional and in no way actually represents Burger Liquor.</span>',
+      iDid: 'Designed the prototype with a group in invision. Designed with thorough UX Research techniques applied to back design decisions, along with user testing. <br> <span class="note">Note: All media used was free for use under a CC license and does not belong to me. Logo design belongs to Burger Liquor fully. They were not created by and do not belong to me.</span>'
     },
     kilRec = {
       id: 'kilrec',
@@ -41,8 +42,8 @@
       link: 'https://github.com/mew-mo/sweet-as',
       brief: 'A frontend site',
       tools: ['html', 'scss', 'js'],
-      description: 'A fictional promotional website for Tourism New Zealand made for booking short trips to Queenstown. With this application, you can book a 15-day-max trip, view accommodation and add complimentary meals.',
-      iDid: 'Coded in HTML, SCSS and JS using a Gulp compiler. Managed packages with npm/node.js. I created the design and prototyped it in figma. Used the Mapbox API for the accommodation selection, and a few extra plugins and libraries for effects.'
+      description: 'A fictional promotional website for Tourism New Zealand made for booking short trips to Queenstown. With this application, you can book a 15-day-max trip, view accommodation and add complimentary meals. <br> <span class="note">Note: The premise for this project is entirely fictional. Toruism New Zealand was not involved and is not represented by the content in this project.</span>',
+      iDid: 'Coded in HTML, SCSS and JS using a Gulp compiler. Managed packages with npm/node.js. I created the design and prototyped it in figma. Used the Mapbox API for the accommodation selection, and a few extra plugins and libraries for effects. Designed the promotional logo. <br> <span class="note">Note: The logo design (wordmark and fern) belong to Tourism New Zealand fully. They were not created by and do not belong to me.</span>'
     },
     needAHand = {
       id: 'needahand',
@@ -649,7 +650,8 @@
 
       document.querySelector('.section-img-overlay').style.display = 'flex';
 
-      document.querySelector('body').style.overflowY = 'hidden';
+      document.querySelector('body').style.overflow = 'hidden';
+      console.log('HIDE');
 
       document.querySelector('nav').style.height = '0';
 
@@ -662,7 +664,7 @@
       document.querySelector('.digi-back').addEventListener('click', () => {
         document.querySelector('nav').style.height = '100px';
         document.querySelector('.section-img-overlay').style.display = 'none';
-        document.querySelector('body').style.overflowY = 'auto';
+        document.querySelector('body').style.overflow = 'auto';
 
       }, false);
     }
