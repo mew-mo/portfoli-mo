@@ -172,6 +172,15 @@
     }
   ];
 
+  // Skill level object
+  // ==================
+  lvl = {
+    b: 'Beginner',
+    i: 'Intermediate',
+    e: 'Expert',
+    l: 'Learning'
+  };
+
   // All Pages
   // ==========================================
   const nav = document.querySelector('#mobileNav');
@@ -214,7 +223,7 @@
   });
 
   // making it unscrollable if the mobile nav is open
-  window.addEventListener('click', (e) => {
+  document.querySelector('#mobileNav').addEventListener('click', (e) => {
     if (document.querySelector('.nav__toggle').ariaExpanded == 'false') {
       setTimeout(() => {
         document.querySelector('body').style.overflow = 'auto';
@@ -238,8 +247,12 @@
     title: document.querySelector('.title'),
     subtitle: document.querySelector('.subtitle'),
     iSubtitle: document.querySelector('.i-subtitle'),
+    nextTxt: document.querySelector('.next-txt'),
+    skillLvl: document.querySelector('.skill-level'),
 
     init: () => {
+      // register gsap
+      gsap.registerPlugin(ScrollTrigger);
       appHome.heroAnims();
     },
 
@@ -248,23 +261,28 @@
 
         document.querySelector('.entry-txt h1').classList.add = 'vanish';
 
-        // anime({
-        //   targets: appHome.title,
-        //   scale: 0.2,
-        //   marginLeft: '-90px',
-        // });
-        alert('you found a button that doesnt do anything (cool) yet! but dont worry, i have plans :)');
-        // anime({
-        //   targets: appHome.subtitle,
-        //   scale: 0.2,
-        // });
+        anime({
+          targets: appHome.title,
+          scale: 0.2,
+          marginLeft: '-990px',
+        });
+
+        anime({
+          targets: appHome.subtitle,
+          scale: 0.2,
+        });
+
+        setTimeout(() => {
+          appHome.nextTxt.style.display = 'block';
+          // NOTE: can add nxt txt anims here, maybe make it 0 opacity then come in. can use anime or gsap for it..?
+          appHome.skillLvl.style.display = 'none';
+          appHome.subtitle.style.marginTop = '1px';
+          appHome.nextTxt.style.paddingBottom = '50px';
+          appHome.title.style.display = 'none';
+        }, 1000);
       }, false);
 
       gsap.from('.title', {
-        scrollTrigger: {
-          trigger: '.title',
-          scrub: true
-        },
         autoAlpha: 0,
         translateX: -302,
         duration: 1,
@@ -273,10 +291,6 @@
       });
 
       gsap.from('.subtitle', {
-        scrollTrigger: {
-          trigger: '.subtitle',
-          scrub: true
-        },
         autoAlpha: 0,
         translateX: -302,
         delay: 1,
@@ -286,10 +300,6 @@
       });
 
       gsap.from('.i-subtitle', {
-        scrollTrigger: {
-          trigger: '.subtitle',
-          scrub: true
-        },
         autoAlpha: 0,
         delay: 2,
         duration: 1,
@@ -297,28 +307,12 @@
         ease: 'easeInOutCirc'
       });
 
-    //   const anim = gsap.fromTo('.section-work',
-    //     {autoAlpha: 0, y: 50},
-    //     {duration: 1, autoAlpha: 1, y: 0});
-    //     ScrollTrigger.create: ({
-    //       trigger: '.section-work',
-    //       // start: 'top',
-    //       animation: anim,
-    //       // end: '100% bottom',
-    //       scrub: true
-    //     });
-    // });
-
     var tl = gsap.timeline({
       scrollTrigger: '.work-txt',
-      scrub: true,
       ease: 'sine.inOut',
-      markers: true,
-      start: 'top top',
-      end: 'bottom',
-      startColor: 'green',
-      endColor: 'red',
-      fontSize: '12px'
+      scrub: true,
+      start: 'top',
+      end: '100% bottom',
     });
 
     tl
@@ -331,37 +325,71 @@
         opacity: 1,
         y: 0
       });
-      // solved my prob here
-      // https://greensock.com/forums/topic/24456-markers-and-scrolltrigger-not-working/
 
+      appHome.skillClick();
+    },
+    skillClick: () => {
+      appHome.nextTxt.addEventListener('click', (e) => {
+        if (e.target.innerHTML == 'Languages') {
+          e.target.classList.add('accent-pal');
+          document.querySelector('.lang-list').style.display = 'block';
+          appHome.skillLvl.style.display = 'inline-block';
+        } else {
+          document.querySelector('.lang-list').style.display = 'none';
+          document.querySelector('.lang').classList.remove('accent-pal');
+        }
+        if (e.target.innerHTML == 'Tools') {
+          e.target.classList.add('accent-pal');
+          document.querySelector('.tool-list').style.display = 'block';
+          appHome.skillLvl.style.display = 'inline-block';
+        } else {
+          document.querySelector('.tool-list').style.display = 'none';
+          document.querySelector('.tools').classList.remove('accent-pal');
+        }
+        if (e.target.innerHTML == 'Other') {
+          e.target.classList.add('accent-pal');
+          document.querySelector('.other-list').style.display = 'block';
+          appHome.skillLvl.style.display = 'inline-block';
+        } else {
+          document.querySelector('.other-list').style.display = 'none';
+          document.querySelector('.other').classList.remove('accent-pal');
+        }
+      }, false);
 
-    //
-    // gsap.fromTo('.section-work', {
-    //     autoAlpha: 0,
-    //     y: 50
-    //   }, {
-    //     scrollTrigger: {
-    //       trigger: '.work-txt',
-    //       start: 'top',
-    //       scrub: 0.5
-    //     },
-    //     // duration: 1,
-    //     autoAlpha: 1,
-    //     y: 0
-    //   });
+      appHome.skillHover();
+    }, //skillClick
 
-      // gsap.to('.section-work', { autoAlpha: 1,
-      //   scrollTrigger: {
-      //     trigger: '.section-landing',
-      //     start: 'top top+100',
-      //     // trigger when the element is 100px from the top of the viewport
-      //     scrub: true,
-      //     end: '+= 200',
-      //     // will end after scrolling 200px beyond the start
-      //     // markers: true
-      //   }
-      // });
-    }
+    skillHover: () => {
+      appHome.nextTxt.addEventListener('mouseover', (e) => {
+        if (e.target.innerHTML == 'HTML') {
+          appHome.skillLvl.innerHTML = lvl.i;
+        } else if (e.target.innerHTML == 'JS') {
+          appHome.skillLvl.innerHTML = lvl.i;
+        } else if (e.target.innerHTML == 'CSS') {
+          appHome.skillLvl.innerHTML = lvl.i;
+        } else if (e.target.innerHTML == 'PHP') {
+          appHome.skillLvl.innerHTML = lvl.b;
+        } else if (e.target.innerHTML == 'Photoshop') {
+          appHome.skillLvl.innerHTML = lvl.i;
+        } else if (e.target.innerHTML == 'Illustrator') {
+          appHome.skillLvl.innerHTML = lvl.i;
+        } else if (e.target.innerHTML == 'InDesign') {
+          appHome.skillLvl.innerHTML = lvl.b;
+        } else if (e.target.innerHTML == 'Sass') {
+          appHome.skillLvl.innerHTML = lvl.i;
+        } else if (e.target.innerHTML == 'JQuery') {
+          appHome.skillLvl.innerHTML = lvl.i;
+        } else if (e.target.innerHTML == 'Git') {
+          appHome.skillLvl.innerHTML = lvl.i;
+        } else if (e.target.innerHTML == 'Wordpress') {
+          appHome.skillLvl.innerHTML = lvl.i;
+        } else if (e.target.innerHTML == 'Bootstrap') {
+          appHome.skillLvl.innerHTML = lvl.i;
+        } else {
+          appHome.skillLvl.innerHTML = 'Hover or tap for my skill level to show here!';
+        }
+      }, false);
+    } //skillHover
   }; //appHome ends
 
   // WUX.HTML
@@ -651,7 +679,6 @@
       document.querySelector('.section-img-overlay').style.display = 'flex';
 
       document.querySelector('body').style.overflow = 'hidden';
-      console.log('HIDE');
 
       document.querySelector('nav').style.height = '0';
 
@@ -665,7 +692,6 @@
         document.querySelector('nav').style.height = '100px';
         document.querySelector('.section-img-overlay').style.display = 'none';
         document.querySelector('body').style.overflow = 'auto';
-
       }, false);
     }
   }; //appDigi ends

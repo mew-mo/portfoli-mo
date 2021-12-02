@@ -73,7 +73,7 @@ h4 {
 h5 {
   font-size: 1.8rem;
   font-weight: 400;
-  text-transform: lowercase;
+  // text-transform: lowercase;
 }
 
 h6 {
@@ -112,6 +112,7 @@ span {
   letter-spacing: 0;
   transform: $scale;
   position: relative;
+  text-transform: lowercase;
   z-index: 99;
   transition: all 280ms ease-in-out;
   text-shadow: -1px 4px 11px rgba(0,0,0,0.61);
@@ -464,7 +465,7 @@ nav ul {
   width: 50%;
 
   .entry-txt,
-  .next-txt,
+  // .next-txt,
   .change-hero-txt {
     margin-left: $main-margins;
   }
@@ -511,6 +512,47 @@ nav ul {
   display: inline-block;
   width: 100px;
   height: 100px;
+}
+
+// next-txt stuff
+.mini-menu-item {
+  display: inline-block;
+  padding: 10px 20px 0 0;
+  cursor: pointer;
+  transition: all 280ms ease-in-out;
+
+  &:hover {
+    color: $accent;
+    transition: all 280ms ease-in-out;
+  }
+}
+
+.lang-list,
+.tool-list,
+.other-list {
+  display: none;
+  margin-top: 20px;
+}
+
+.lang-list li,
+.tool-list li,
+.other-list li {
+  display: inline-block;
+  padding-right: 20px;
+  cursor: pointer;
+  transition: all 280ms ease-in-out;
+
+  &:hover {
+    color: $main;
+    transition: all 280ms ease-in-out;
+  }
+}
+
+.skill-level {
+  display: inline-block;
+  font-style: italic;
+  font-weight: 200;
+  margin-top: 20px;
 }
 
 // arrow hov effectz
