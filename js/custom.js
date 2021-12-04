@@ -6,15 +6,15 @@
   // web/ux arr
   // ==================
   var web = [
-    mrGos = {
-      id: 'mrgos',
-      title: 'Mr Go\'s',
-      img: 'img/mrgos.png',
-      link: 'https://drive.google.com/file/d/1aBpMzEfH1WXK_LerwuhTl0LmyPtNvZZ1/view',
-      brief: 'A fully responsive wordpress website',
-      tools: ['Wordpress'],
-      description: 'In this project I designed and created a website for Mr Go\'s, an Asian Fusion restaurant based in Wellington, redesigning their current website. I used a prebuilt wordpress theme for this, and focused on simplifying the navigation and overall usability of the site through several rounds of user testing.'
-    },
+    // mrGos = {
+    //   id: 'mrgos',
+    //   title: 'Mr Go\'s',
+    //   img: 'img/mrgos.png',
+    //   link: 'https://drive.google.com/file/d/1aBpMzEfH1WXK_LerwuhTl0LmyPtNvZZ1/view',
+    //   brief: 'A fully responsive wordpress website',
+    //   tools: ['Wordpress'],
+    //   description: 'In this project I designed and created a website for Mr Go\'s, an Asian Fusion restaurant based in Wellington, redesigning their current website. I used a prebuilt wordpress theme for this, and focused on simplifying the navigation and overall usability of the site through several rounds of user testing.'
+    // },
     burgerLiquor = {
       id: 'burgerliquor',
       title: 'Burger Liquor',
