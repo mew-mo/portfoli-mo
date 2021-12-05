@@ -39,7 +39,7 @@
       id: 'sweetas',
       title: 'Sweet As',
       img: 'img/sweetas.png',
-      link: 'https://github.com/mew-mo/sweet-as',
+      link: 'https://mew-mo.github.io/sweet-as/',
       brief: 'A frontend site',
       tools: ['html', 'scss', 'js'],
       description: 'A fictional promotional website for Tourism New Zealand made for booking short trips to Queenstown. With this application, you can book a 15-day-max trip, view accommodation and add complimentary meals. <br> <span class="note">Note: The premise for this project is entirely fictional. Toruism New Zealand was not involved and is not represented by the content in this project.</span>',
@@ -59,7 +59,7 @@
       id: 'nzslt',
       title: 'NZ Sea Lion Trust',
       img: 'img/nzslt.png',
-      link: 'https://github.com/mew-mo/nz-sea-lion-trust',
+      link: 'https://mew-mo.github.io/nz-sea-lion-trust/',
       brief: 'A simple static frontend site',
       tools: ['html', 'scss', 'js'],
       description: 'The New Zealand Sea Lion Trust are a non-profit organisation who were in need of a website redeign. <br> <span class="note">Note: The premise for this project was enitrely fictional and in no way actually represents the New Zealand Sea Lion Trust.</span>',
@@ -70,7 +70,7 @@
       title: 'Clockwork Creative',
       img: 'img/clockwork.png',
       link: 'http://mo.yoobee.site/',
-      brief: 'A custom Wordpress Theme with customization controls',
+      brief: 'A custom Wordpress Theme with customisation controls',
       tools: ['php', 'html', 'css', 'js', 'wordpress'],
       description: 'Clockwork Creative is a video production company based in Wellington. They needed a website that would act as a way to view their latest projects, learn about them, see what services they offer, purchase merchandise and contact them. <br> <span class="note">Note: The premise for this project was enitrely fictional and in no way actually represents Clockwork Creative.</span>',
       iDid: 'For this project, I coded the theme custom fully in PHP and CSS with elements of HTML, JS. Customisation controls were coded into the theme for the client\'s ease. Security, performance optimisation and SEO were focused on when building the site, utilising plugins to help these aspects. I created the design and prototyped it in figma. <br> <span class="note">Note: All copy, media used and logo belong to Clockwork Creative fully. They were not created by and do not belong to me.</span>'
@@ -85,7 +85,7 @@
       id: 'luma',
       title: 'Luma Lights Festival',
       img: 'img/luma.png',
-      link: 'https://drive.google.com/uc?id=16zQq6fEFpG9rv4Gv9XyzFCgPrpCltInM',
+      link: 'https://drive.google.com/uc?id=1y_EZoccFfMkNF5XhGFtsXPiKYMBkoEJA',
       brief: 'Branding for Luma Lights Festival',
       tools: ['photoshop', 'illustrator'],
       description: 'A design project in which I created branding, posters and cards to promote Queenstown\'s Luma Lights Festival.'
@@ -94,7 +94,7 @@
       id: 'dlw',
       title: 'Don\'t Let Words',
       img: 'img/dlw.png',
-      link: '#',
+      link: 'https://drive.google.com/uc?id=1REtOwxzkykLGCo-IvFRoOpn4auxskM6H',
       brief: 'Branding for an anti-1080 Campaign',
       tools: ['photoshop', 'illustrator'],
       description: 'This design project utilised the tagline "Don\'t Let Words be all that\'s left of them" to campaign against 1080 poisoning in New Zealand. I created posters, logos, brochures and merchandise for this project.'
@@ -103,20 +103,20 @@
       id: 'mmca',
       title: 'MMCA',
       img: 'img/mmca.png',
-      link: '#',
+      link: 'https://drive.google.com/uc?id=1rekZ9HcvHg5TXKRLSt-uATLtJTMmr7rS',
       brief: 'Brochure for the MMCA Museum',
       tools: ['photoshop', 'indesign'],
       description: 'This project was for designing a brochure for the MMCA- The National Museum of Modern and Contemporary Art, located in South Korea. It is primarily focused on navigation, and features a large cutout triangle that makes the map display even when the brochure is fully folded.'
     },
-    tinyHouse = {
-      id: 'tinyhouse',
-      title: 'Tiny House',
-      img: 'img/tinyhouse.png',
-      link: '#',
-      brief: 'Fictional Logo for Tiny House',
-      tools: ['photoshop', 'indesign'],
-      description: 'A small branding project, where I was challenged to create a logo for a fictional company that writes magazines about small houses.'
-    },
+    // tinyHouse = {
+    //   id: 'tinyhouse',
+    //   title: 'Tiny House',
+    //   img: 'img/tinyhouse.png',
+    //   link: '#',
+    //   brief: 'Fictional Logo for Tiny House',
+    //   tools: ['photoshop', 'indesign'],
+    //   description: 'A small branding project, where I was challenged to create a logo for a fictional company that writes magazines about small houses.'
+    // },
     musicPlanet = {
       id: 'musicPlanet',
       title: 'Music Planet',
@@ -139,7 +139,7 @@
       id: 'snowdin',
       title: 'Snowdin Snacks',
       img: 'img/snowdin.png',
-      link: '#',
+      link: 'https://drive.google.com/uc?id=1gF5av-wIx2Rejgl3GcslqAQE9sfUCqFU',
       brief: 'A packaging project',
       tools: ['photoshop', 'illustrator', 'physical skills'],
       description: 'Inspired by Toby Fox\'s "Undertale", I created a fictional company entitled "Snowdin Snacks" and designed the packaging for the frozen treat called the "Bisicle". The packaging was created physically through researching substrates and both creating my own die-lines and cutting them out.'
@@ -259,27 +259,24 @@
     heroAnims: () => {
       document.querySelector('.link--arrowed').addEventListener('click', () => {
 
-        document.querySelector('.entry-txt h1').classList.add = 'vanish';
-
         anime({
           targets: appHome.title,
           scale: 0.2,
           marginLeft: '-990px',
         });
 
-        anime({
-          targets: appHome.subtitle,
-          scale: 0.2,
-        });
+        // anime({
+        //   targets: appHome.subtitle,
+        //   scale: 0.4,
+        // });
 
         setTimeout(() => {
           appHome.nextTxt.style.display = 'block';
-          // NOTE: can add nxt txt anims here, maybe make it 0 opacity then come in. can use anime or gsap for it..?
-          appHome.skillLvl.style.display = 'none';
-          appHome.subtitle.style.marginTop = '1px';
-          appHome.nextTxt.style.paddingBottom = '50px';
-          appHome.title.style.display = 'none';
-        }, 1000);
+          // appHome.nextTxt.style.opacity = '0';
+
+          appHome.nextAnims();
+
+        }, 500);
       }, false);
 
       gsap.from('.title', {
@@ -328,8 +325,24 @@
 
       appHome.skillClick();
     },
+
+    nextAnims: () => {
+      anime({
+        targets: appHome.nextTxt,
+        opacity: '1',
+        paddingBottom: '50px'
+      });
+
+      anime({
+        targets: appHome.subtitle,
+        marginTop: '51px'
+      });
+      appHome.skillLvl.style.display = 'none';
+      appHome.title.style.display = 'none';
+    },
+
     skillClick: () => {
-      appHome.nextTxt.addEventListener('click', (e) => {
+      document.querySelector('.mini-menu').addEventListener('click', (e) => {
         if (e.target.innerHTML == 'Languages') {
           e.target.classList.add('accent-pal');
           document.querySelector('.lang-list').style.display = 'block';
@@ -360,7 +373,8 @@
     }, //skillClick
 
     skillHover: () => {
-      appHome.nextTxt.addEventListener('mouseover', (e) => {
+
+      findSkill = (e) => {
         if (e.target.innerHTML == 'HTML') {
           appHome.skillLvl.innerHTML = lvl.i;
         } else if (e.target.innerHTML == 'JS') {
@@ -386,9 +400,12 @@
         } else if (e.target.innerHTML == 'Bootstrap') {
           appHome.skillLvl.innerHTML = lvl.i;
         } else {
-          appHome.skillLvl.innerHTML = 'Hover or tap for my skill level to show here!';
+          appHome.skillLvl.innerHTML = 'Hover or press for my skill level to show here!';
         }
-      }, false);
+      }; //findskill
+
+      appHome.nextTxt.addEventListener('mouseover',findSkill, false);
+      appHome.nextTxt.addEventListener('click',findSkill, false);
     } //skillHover
   }; //appHome ends
 
@@ -404,6 +421,7 @@
     },
 
     addProjs: () => {
+
       for (var i = 0; i < web.length; i++) {
         document.querySelector('.work-bbls').innerHTML += `
         <div class="bubble-container">
@@ -420,6 +438,13 @@
 
       setInterval(appWux.anims, 1000);
 
+      // NOTE: have a like, setBbls function here to make the linter happy
+
+      for (var i = 0; i < appWux.bubbles.length; i++) {
+        document.querySelector(`#bubble${i}`).style.width = '0';
+        document.querySelector(`#bubble${i}`).style.height = '0';
+      }
+
       document.querySelector('.loader-container').style.opacity = 1;
       document.querySelector('.loader-container').style.display = 'flex';
 
@@ -429,8 +454,23 @@
         document.querySelector('.loader-container').style.opacity = 0;
         document.querySelector('.loader-container').style.display = 'none';
         document.querySelector('.work-bbls').style.opacity = 1;
-        appWux.anims();
+        appWux.bblAppear();
       });
+    },
+
+    bblAppear: () => {
+      var bblTime = 500;
+
+      for (let i = 0; i < appWux.bubbles.length; i++) {
+        setTimeout(() => {
+        document.querySelector(`#bubble${i}`).style.height = '250px';
+        document.querySelector(`#bubble${i}`).style.width = '250px';
+
+        }, bblTime);
+
+        bblTime += 800;
+      }
+      appWux.anims();
     },
 
     anims: () => {
@@ -525,6 +565,11 @@
 
       setInterval(appGraphic.anims, 1000);
 
+      for (var i = 0; i < appGraphic.bubbles.length; i++) {
+        document.querySelector(`#bubble${i}`).style.width = '0';
+        document.querySelector(`#bubble${i}`).style.height = '0';
+      }
+
       document.querySelector('.loader-container').style.opacity = 1;
       document.querySelector('.loader-container').style.display = 'flex';
 
@@ -534,8 +579,23 @@
         document.querySelector('.loader-container').style.opacity = 0;
         document.querySelector('.loader-container').style.display = 'none';
         document.querySelector('.work-bbls').style.opacity = 1;
-        appGraphic.anims();
+        appGraphic.bblAppear();
       });
+    },
+
+    bblAppear: () => {
+      var bblTime = 500;
+
+      for (let i = 0; i < appGraphic.bubbles.length; i++) {
+        setTimeout(() => {
+        document.querySelector(`#bubble${i}`).style.height = '250px';
+        document.querySelector(`#bubble${i}`).style.width = '250px';
+
+        }, bblTime);
+
+        bblTime += 800;
+      }
+      appGraphic.anims();
     },
 
     anims: () => {
@@ -629,6 +689,11 @@
 
       setInterval(appDigi.anims, 1000);
 
+      for (var i = 0; i < appDigi.bubbles.length; i++) {
+        document.querySelector(`#bubble${i}`).style.width = '0';
+        document.querySelector(`#bubble${i}`).style.height = '0';
+      }
+
       document.querySelector('.loader-container').style.opacity = 1;
       document.querySelector('.loader-container').style.display = 'flex';
 
@@ -638,8 +703,23 @@
         document.querySelector('.loader-container').style.opacity = 0;
         document.querySelector('.loader-container').style.display = 'none';
         document.querySelector('.work-bbls').style.opacity = 1;
-        appDigi.anims();
+        appDigi.bblAppear();
       });
+    },
+
+    bblAppear: () => {
+      var bblTime = 500;
+
+      for (let i = 0; i < appDigi.bubbles.length; i++) {
+        setTimeout(() => {
+        document.querySelector(`#bubble${i}`).style.height = '250px';
+        document.querySelector(`#bubble${i}`).style.width = '250px';
+
+        }, bblTime);
+
+        bblTime += 800;
+      }
+      appDigi.anims();
     },
 
     anims: () => {
@@ -707,6 +787,31 @@
       });
     }
   };
+  // appAbt ends
+
+  appContact = {
+    init: () => {
+      var tl = gsap.timeline({
+        scrollTrigger: 'h3',
+        ease: 'sine.inOut',
+        scrub: true,
+        start: 'top',
+        end: '100% bottom',
+      });
+
+      tl
+      .set('form', {
+        opacity: 0,
+        y: 50,
+      })
+      .to('form', {
+        duration: 1,
+        opacity: 1,
+        y: 0
+      });
+    }
+  };
+  // appContact ends
 
   if (document.querySelector('#home')) {
     appHome.init();
@@ -722,6 +827,8 @@
     appDigi.init();
   } else if (document.querySelector('#about')) {
     appAbt.init();
+  } else if (document.querySelector('#contact')) {
+    appContact.init();
   }
 
 }());
