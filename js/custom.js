@@ -441,8 +441,7 @@
       // NOTE: have a like, setBbls function here to make the linter happy
 
       for (var i = 0; i < appWux.bubbles.length; i++) {
-        document.querySelector(`#bubble${i}`).style.width = '0';
-        document.querySelector(`#bubble${i}`).style.height = '0';
+        document.querySelector(`#bubble${i}`).style.opacity = '0';
       }
 
       document.querySelector('.loader-container').style.opacity = 1;
@@ -463,8 +462,7 @@
 
       for (let i = 0; i < appWux.bubbles.length; i++) {
         setTimeout(() => {
-        document.querySelector(`#bubble${i}`).style.height = '250px';
-        document.querySelector(`#bubble${i}`).style.width = '250px';
+        document.querySelector(`#bubble${i}`).style.opacity = '1';
 
         }, bblTime);
 
@@ -566,8 +564,7 @@
       setInterval(appGraphic.anims, 1000);
 
       for (var i = 0; i < appGraphic.bubbles.length; i++) {
-        document.querySelector(`#bubble${i}`).style.width = '0';
-        document.querySelector(`#bubble${i}`).style.height = '0';
+        document.querySelector(`#bubble${i}`).style.opacity = '0';
       }
 
       document.querySelector('.loader-container').style.opacity = 1;
@@ -588,8 +585,7 @@
 
       for (let i = 0; i < appGraphic.bubbles.length; i++) {
         setTimeout(() => {
-        document.querySelector(`#bubble${i}`).style.height = '250px';
-        document.querySelector(`#bubble${i}`).style.width = '250px';
+        document.querySelector(`#bubble${i}`).style.opacity = '1';
 
         }, bblTime);
 
@@ -690,8 +686,7 @@
       setInterval(appDigi.anims, 1000);
 
       for (var i = 0; i < appDigi.bubbles.length; i++) {
-        document.querySelector(`#bubble${i}`).style.width = '0';
-        document.querySelector(`#bubble${i}`).style.height = '0';
+        document.querySelector(`#bubble${i}`).style.opacity = '0';
       }
 
       document.querySelector('.loader-container').style.opacity = 1;
@@ -712,8 +707,7 @@
 
       for (let i = 0; i < appDigi.bubbles.length; i++) {
         setTimeout(() => {
-        document.querySelector(`#bubble${i}`).style.height = '250px';
-        document.querySelector(`#bubble${i}`).style.width = '250px';
+        document.querySelector(`#bubble${i}`).style.opacity = '1';
 
         }, bblTime);
 
