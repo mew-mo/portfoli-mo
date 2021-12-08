@@ -440,9 +440,7 @@
 
       // NOTE: have a like, setBbls function here to make the linter happy
 
-      for (var i = 0; i < appWux.bubbles.length; i++) {
-        document.querySelector(`#bubble${i}`).style.opacity = '0';
-      }
+      appWux.setBbls();
 
       document.querySelector('.loader-container').style.opacity = 1;
       document.querySelector('.loader-container').style.display = 'flex';
@@ -455,6 +453,12 @@
         document.querySelector('.work-bbls').style.opacity = 1;
         appWux.bblAppear();
       });
+    },
+
+    setBbls: () => {
+      for (var i = 0; i < appWux.bubbles.length; i++) {
+        document.querySelector(`#bubble${i}`).style.opacity = '0';
+      }
     },
 
     bblAppear: () => {
@@ -563,9 +567,7 @@
 
       setInterval(appGraphic.anims, 1000);
 
-      for (var i = 0; i < appGraphic.bubbles.length; i++) {
-        document.querySelector(`#bubble${i}`).style.opacity = '0';
-      }
+      appGraphic.setBbls();
 
       document.querySelector('.loader-container').style.opacity = 1;
       document.querySelector('.loader-container').style.display = 'flex';
@@ -578,6 +580,12 @@
         document.querySelector('.work-bbls').style.opacity = 1;
         appGraphic.bblAppear();
       });
+    },
+
+    setBbls: () => {
+      for (var i = 0; i < appGraphic.bubbles.length; i++) {
+        document.querySelector(`#bubble${i}`).style.opacity = '0';
+      }
     },
 
     bblAppear: () => {
@@ -685,9 +693,7 @@
 
       setInterval(appDigi.anims, 1000);
 
-      for (var i = 0; i < appDigi.bubbles.length; i++) {
-        document.querySelector(`#bubble${i}`).style.opacity = '0';
-      }
+      appDigi.setBbls();
 
       document.querySelector('.loader-container').style.opacity = 1;
       document.querySelector('.loader-container').style.display = 'flex';
@@ -700,6 +706,12 @@
         document.querySelector('.work-bbls').style.opacity = 1;
         appDigi.bblAppear();
       });
+    },
+
+    setBbls: () => {      
+      for (var i = 0; i < appDigi.bubbles.length; i++) {
+        document.querySelector(`#bubble${i}`).style.opacity = '0';
+      }
     },
 
     bblAppear: () => {
