@@ -88,7 +88,7 @@
       link: 'https://drive.google.com/uc?id=1y_EZoccFfMkNF5XhGFtsXPiKYMBkoEJA',
       brief: 'Branding for Luma Lights Festival',
       tools: ['photoshop', 'illustrator'],
-      description: 'A design project in which I created branding, posters and cards to promote Queenstown\'s Luma Lights Festival.'
+      description: 'A design project in which I created branding, posters, magazine layouts, cards and letter sets to promote Queenstown\'s Luma Lights Festival.'
     },
     dlw = {
       id: 'dlw',
@@ -97,7 +97,7 @@
       link: 'https://drive.google.com/uc?id=1REtOwxzkykLGCo-IvFRoOpn4auxskM6H',
       brief: 'Branding for an anti-1080 Campaign',
       tools: ['photoshop', 'illustrator'],
-      description: 'This design project utilised the tagline "Don\'t Let Words be all that\'s left of them" to campaign against 1080 poisoning in New Zealand. I created posters, logos, brochures and merchandise for this project.'
+      description: 'This design project utilised the tagline "Don\'t Let Words be all that\'s left of them" to campaign against 1080 poisoning in New Zealand. I created posters, logos, magazine layouts, brochures and merchandise for this project.'
     },
     mmca = {
       id: 'mmca',
@@ -708,7 +708,7 @@
       });
     },
 
-    setBbls: () => {      
+    setBbls: () => {
       for (var i = 0; i < appDigi.bubbles.length; i++) {
         document.querySelector(`#bubble${i}`).style.opacity = '0';
       }
