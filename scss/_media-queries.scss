@@ -54,6 +54,10 @@
 // ======================
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
 
+  html {
+    overflow-x: hidden;
+  }
+
   * {
     font-size: 13px;
   }
@@ -220,11 +224,24 @@
       max-height: 60vh;
     }
   }
+
+  .wux-footer,
+  .gd-footer,
+  .dg-footer {
+    z-index: -1;
+    position: relative;
+    top: 40vh;
+    width: 100vw;
+  }
 }
 
 // mobile phones
 // ======================
 @media only screen and (max-width: 600px) {
+
+  html {
+    overflow-x: hidden;
+  }
 
   * {
     font-size: 12px;
@@ -265,6 +282,10 @@
     .change-hero-txt {
       margin-left: 0;
     }
+  }
+
+  .i-subtitle {
+    margin-top: 5px;
   }
 
   .hero-txt,
@@ -316,13 +337,22 @@
   }
 
   .section-abt {
+
     .me-img,
     .abt-txt {
       width: 100%;
     }
 
     .abt-txt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-top: 50px;
+
+      p {
+        width: 90%;
+        margin-left: 5%;
+      }
     }
 
     .me-img {
@@ -352,7 +382,10 @@
   }
 
   .abt-footer {
-    margin-top: 400px;
+    position: relative;
+    margin-top: 300px;
+    bottom: 0;
+    top: 100%;
   }
 
   .section-wux-proj {
@@ -408,6 +441,15 @@
     a {
       margin-top: 30px;
     }
+  }
+
+  .wux-footer,
+  .gd-footer,
+  .dg-footer {
+    z-index: -1;
+    position: relative;
+    top: 40vh;
+    width: 100vw;
   }
 
 }

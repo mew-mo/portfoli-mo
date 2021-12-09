@@ -233,8 +233,14 @@
       document.querySelector('body').style.overflow = 'hidden';
     }
     // close menu if ur clickin work
+    // NOTE: Broke :(
     if (e.target.innerHTML === 'work') {
       document.querySelector('.nav__toggle').click();
+      console.log('qqqqq');
+      setTimeout(() => {
+        window.location = 'index.html#work';
+        console.log('going going going');
+      }, 1000);
     }
   }, false);
   // mobile nav ends
@@ -265,17 +271,9 @@
           marginLeft: '-990px',
         });
 
-        // anime({
-        //   targets: appHome.subtitle,
-        //   scale: 0.4,
-        // });
-
         setTimeout(() => {
           appHome.nextTxt.style.display = 'block';
-          // appHome.nextTxt.style.opacity = '0';
-
           appHome.nextAnims();
-
         }, 500);
       }, false);
 
