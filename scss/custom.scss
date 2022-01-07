@@ -84,6 +84,7 @@ h6 {
 p {
   font-size: 1.3rem;
   line-height: 2.8rem;
+  font-weight: 300;
 }
 
 a {
@@ -900,9 +901,13 @@ footer {
   @extend .section-landing;
   height: 70vh;
 
-  .me-img,
+  .me-img {
+    width: 45%;
+  }
+
   .abt-txt {
-    width: 50%;
+    width: 55%;
+    padding-right: 6%;
   }
 
   .abt-txt {

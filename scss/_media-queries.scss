@@ -54,6 +54,10 @@
 // ======================
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
 
+  html {
+    overflow-x: hidden;
+  }
+
   * {
     font-size: 13px;
   }
@@ -174,7 +178,7 @@
   }
 
   .abt-footer {
-    margin-top: 100px;
+    margin-top: 200px;
   }
 
   .section-wux-proj {
@@ -192,9 +196,10 @@
 
       .proj-title,
       .proj-brief,
-      .proj-subtitle,
       .proj-desc,
-      .go-to-proj-btn {
+      .go-to-proj-btn,
+      .proj-idid,
+      h5.accent-pal {
         padding: 10px 70px;
       }
 
@@ -207,11 +212,36 @@
   .back-to-all {
     margin-top: 70px;
   }
+
+  .section-img-overlay {
+    z-index: 1;
+
+    h3 {
+      margin-top: -20%;
+    }
+
+    img {
+      max-height: 60vh;
+    }
+  }
+
+  .wux-footer,
+  .gd-footer,
+  .dg-footer {
+    z-index: -1;
+    position: relative;
+    top: 40vh;
+    width: 100vw;
+  }
 }
 
 // mobile phones
 // ======================
 @media only screen and (max-width: 600px) {
+
+  html {
+    overflow-x: hidden;
+  }
 
   * {
     font-size: 12px;
@@ -254,6 +284,10 @@
     }
   }
 
+  .i-subtitle {
+    margin-top: 5px;
+  }
+
   .hero-txt,
   .hero-img {
     width: 100%;
@@ -285,12 +319,12 @@
   }
 
   .section-wux {
-    margin-top: 50px;
+    margin-top: -20px;
 
     .wiggle {
       display: block;
       padding: 15px 0;
-      margin-left: 25%;
+      margin-left: 20%;
       width: 255px;
       top: 0;
     }
@@ -303,13 +337,22 @@
   }
 
   .section-abt {
+
     .me-img,
     .abt-txt {
       width: 100%;
     }
 
     .abt-txt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-top: 50px;
+
+      p {
+        width: 90%;
+        margin-left: 5%;
+      }
     }
 
     .me-img {
@@ -339,7 +382,10 @@
   }
 
   .abt-footer {
-    margin-top: 400px;
+    position: relative;
+    margin-top: 300px;
+    bottom: 0;
+    top: 100%;
   }
 
   .section-wux-proj {
@@ -360,7 +406,7 @@
       .proj-desc,
       .go-to-proj-btn,
       .proj-idid,
-      h5 {
+      h5.accent-pal {
         padding: 20px;
       }
 
@@ -379,8 +425,12 @@
     z-index: 1;
 
     img {
-      height: 60vh;
+      max-height: 50vh;
       width: auto;
+    }
+
+    h3 {
+      margin-top: -30%;
     }
 
     h3, a {
@@ -392,4 +442,14 @@
       margin-top: 30px;
     }
   }
+
+  .wux-footer,
+  .gd-footer,
+  .dg-footer {
+    z-index: -1;
+    position: relative;
+    top: 40vh;
+    width: 100vw;
+  }
+
 }

@@ -88,7 +88,7 @@
       link: 'https://drive.google.com/uc?id=1y_EZoccFfMkNF5XhGFtsXPiKYMBkoEJA',
       brief: 'Branding for Luma Lights Festival',
       tools: ['photoshop', 'illustrator'],
-      description: 'A design project in which I created branding, posters and cards to promote Queenstown\'s Luma Lights Festival.'
+      description: 'A design project in which I created branding, posters, magazine layouts, cards and letter sets to promote Queenstown\'s Luma Lights Festival.'
     },
     dlw = {
       id: 'dlw',
@@ -97,7 +97,7 @@
       link: 'https://drive.google.com/uc?id=1REtOwxzkykLGCo-IvFRoOpn4auxskM6H',
       brief: 'Branding for an anti-1080 Campaign',
       tools: ['photoshop', 'illustrator'],
-      description: 'This design project utilised the tagline "Don\'t Let Words be all that\'s left of them" to campaign against 1080 poisoning in New Zealand. I created posters, logos, brochures and merchandise for this project.'
+      description: 'This design project utilised the tagline "Don\'t Let Words be all that\'s left of them" to campaign against 1080 poisoning in New Zealand. I created posters, logos, magazine layouts, brochures and merchandise for this project.'
     },
     mmca = {
       id: 'mmca',
@@ -233,8 +233,14 @@
       document.querySelector('body').style.overflow = 'hidden';
     }
     // close menu if ur clickin work
+    // NOTE: Broke :(
     if (e.target.innerHTML === 'work') {
       document.querySelector('.nav__toggle').click();
+      console.log('qqqqq');
+      setTimeout(() => {
+        window.location = 'index.html#work';
+        console.log('going going going');
+      }, 1000);
     }
   }, false);
   // mobile nav ends
@@ -265,17 +271,9 @@
           marginLeft: '-990px',
         });
 
-        // anime({
-        //   targets: appHome.subtitle,
-        //   scale: 0.4,
-        // });
-
         setTimeout(() => {
           appHome.nextTxt.style.display = 'block';
-          // appHome.nextTxt.style.opacity = '0';
-
           appHome.nextAnims();
-
         }, 500);
       }, false);
 
