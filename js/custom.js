@@ -533,6 +533,8 @@
 
       document.querySelector('.go-to-proj-btn a').href = appWuxProj.selectedPage.link;
 
+      document.querySelector('.link--arrowed').href = appWuxProj.selectedPage.link;
+
       document.querySelector('.proj-img img').src = appWuxProj.selectedPage.img;
 
       document.title += `  ${appWuxProj.selectedPage.title}`;
@@ -657,6 +659,8 @@
 
       document.querySelector('.go-to-proj-btn a').href = appGraphicProj.selectedPage.link;
 
+      document.querySelector('.link--arrowed').href = appGraphicProj.selectedPage.link;
+
       document.querySelector('.proj-img img').src = appGraphicProj.selectedPage.img;
 
       document.title += `  ${appGraphicProj.selectedPage.title}`;
@@ -708,7 +712,7 @@
       });
     },
 
-    setBbls: () => {      
+    setBbls: () => {
       for (var i = 0; i < appDigi.bubbles.length; i++) {
         document.querySelector(`#bubble${i}`).style.opacity = '0';
       }
