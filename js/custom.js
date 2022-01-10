@@ -397,6 +397,8 @@
           appHome.skillLvl.innerHTML = lvl.i;
         } else if (e.target.innerHTML == 'Bootstrap') {
           appHome.skillLvl.innerHTML = lvl.i;
+        } else if (e.target.innerHTML == 'React') {
+          appHome.skillLvl.innerHTML = lvl.l;
         } else {
           appHome.skillLvl.innerHTML = 'Hover or press for my skill level to show here!';
         }
